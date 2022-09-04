@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mainContainer">
+        <h2>Daily To-Do list Manager</h2>
+        <div class="toDoContainer">
+            <div class="date"></div>
+            <div class="addToDo">
+                <input type="text" class="addNewToDo" placeholder="Take the garbage out" maxlength="50">
+                <span onclick="newElement()" class="addBtn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </span>
+            </div>
+
+            <div class="pending">You have XX pendig items</div>
+
+            <ul class="myList">
+                <li>Go to codepen and get inspired</li>
+                <li class="checked">Pick a project</li>
+            </ul>
+
+            <div class="completed">Completed tasks: X %</div>
+
+            <ul class="CompletedList hidden">
+                <li>Go to codepen and get inspired</li>
+                <li class="checked">Pick a project</li>
+            </ul>
+
+
+            <div class="ShowAndClearBtn">
+                <button class="show">Show Complete</button>
+                <button class="clear">Clear all</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
