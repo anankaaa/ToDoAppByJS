@@ -35,6 +35,8 @@ const showPendingItems = () => {
     li.appendChild(text)
     myList.appendChild(li);
 
+    
+
     li.addEventListener('click', () => {
       finished.push(unfinished[idx]);
       unfinished.splice(idx, 1);
@@ -44,6 +46,16 @@ const showPendingItems = () => {
       showFinishedItems();
     })
   })
+  const chill = document.querySelector(".chill");
+
+    if(unfinished.length > 0) {
+      pedingNumber.classList.remove("hidden");
+      chill.classList.add("hidden");
+    } else { 
+
+      pedingNumber.classList.add("hidden");
+      chill.classList.remove("hidden");
+    }
 
 }
 
