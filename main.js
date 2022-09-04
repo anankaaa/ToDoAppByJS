@@ -1,5 +1,6 @@
-let unfinished = ['Go to codepen and get inspired', 'Pick a project'];
-let finished = ['Take out the dog for a walk'];
+// localStorage.clear()
+let unfinished = JSON.parse(localStorage.getItem('unfinished')) || [];
+let finished = JSON.parse(localStorage.getItem('finished')) || [];
 
 localStorage
 
@@ -9,12 +10,14 @@ dateObj.innerHTML = now;
 console.log(now);
 
 const newElement = () => {
-  let inputValue = document.querySelector(".addNewToDo").value;
+  let inputField = document.querySelector(".addNewToDo");
  
-  if (inputValue === '') {
+  if (inputField.value === '') {
     alert("You must write something!");
   } else {
-    unfinished.push(inputValue);
+    unfinished.push(inputField.value);
+    localStorage.setItem("unfinished", JSON.stringify(unfinished))
+    inputField.value = ""
     showPendingItems();
     showFinishedItems();
   } 
@@ -35,6 +38,8 @@ const showPendingItems = () => {
     li.addEventListener('click', () => {
       finished.push(unfinished[idx]);
       unfinished.splice(idx, 1);
+      localStorage.setItem("finished", JSON.stringify(finished))
+      localStorage.setItem("unfinished", JSON.stringify(unfinished))
       showPendingItems();
       showFinishedItems();
     })
@@ -57,13 +62,7 @@ const showFinishedItems = () => {
   })
 }
 
-const createButton = () => {
-  const clearAllButton = document.querySelector(".clear");
-  clearAllButton.addEventListener('click', () => {
-    unfinished = [];
-    showPendingItems();
-  });
-
+const createButtons = () => {
   const showCompleteButton = document.querySelector(".show");
   showCompleteButton.addEventListener('click', () => {
     const completedList = document.querySelector(".CompletedList");
@@ -74,13 +73,20 @@ const createButton = () => {
       showCompleteButton.innerHTML = "Hide Complete"
     }
   })
+
+  const clearAllButton = document.querySelector(".clear");
+  clearAllButton.addEventListener('click', () => {
+    unfinished = [];
+    localStorage.setItem("unfinished", JSON.stringify(unfinished))
+    showPendingItems();
+  });
 }
 
 
 const init = () => {
   showPendingItems();
   showFinishedItems();
-  createButton();
+  createButtons();
 }
 
 
