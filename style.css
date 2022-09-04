@@ -23,10 +23,10 @@ h2 {
 }
 
 .date {
-  color: salmon;
+  color: sienna;
   margin-top: 50px;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .addnewToDo {
@@ -39,8 +39,8 @@ h2 {
 .addBtn {
   background-color: darkslategrey;
   color: white;
-  padding: 7px;
-  
+  padding: 2px;
+  border-radius: 4px;
 }
 
 .myList {
@@ -63,17 +63,14 @@ h2 {
   background: #f9f9f9;
 }
 
+.myList li:hover::after {
+  content: "🗑️";
+}
+
 .CompletedList li{
   background: #888;
   color: #fff;
   text-decoration: line-through;
-}
-
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
 }
 
 .ShowAndClearBtn {
@@ -95,4 +92,10 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.chill {
+  color: salmon;
+  font-size: 30px;
+  margin-top: 30px;
 }
