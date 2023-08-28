@@ -71,12 +71,22 @@ h2 {
   padding: 0.5rem 1rem;
 }
 
+.pending,
+.completed {
+  color: salmon;
+  margin: 3rem 0 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: gainsboro;
+  padding: 1rem;
+  width: 30vw;
+  transform: skew(-10deg);
+}
+
 .myList {
   margin: 0;
   padding: 0;
 }
-
-
 
 .myList li,
 .CompletedList li {
@@ -135,20 +145,6 @@ h2 {
   font-weight: bolder;
 }
 
-.pending,
-.completed {
-  color: salmon;
-  margin: 3rem 0 1rem 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  background-color: gainsboro;
-  padding: 1rem;
-  width: 30vw;
-  transform: skew(-10deg);
-}
-
-
-
 .hidden {
   display: none;
 }
@@ -174,7 +170,6 @@ h2 {
 
   .pending,
   .completed {
-    margin: 3rem 0 1rem 2rem;
     font-size: 1.1rem;
   }
 }
@@ -195,7 +190,6 @@ h2 {
 
   .pending,
   .completed {
-    margin: 3rem 0 1rem 2rem;
     width: 50vw;
   }
 
