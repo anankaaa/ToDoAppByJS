@@ -1,15 +1,15 @@
-# To-do
+# To-do Feladat leírás:
 
-Egy "Teendőlista" alkalmazást kell lefejlesztened.   
+Egy "Teendőlista" alkalmazást kell lefejlesztened.  
 Az alkalmazás dizájnját és működését az alábbi ábrák szemléltetik:
 
 ![image](https://user-images.githubusercontent.com/68642008/185645707-a78d212a-0c3e-4736-80a1-71882ebd9bab.png)
 
-A már elvégzett teendők:  
+A már elvégzett teendők:
 
 ![image](https://user-images.githubusercontent.com/68642008/185645880-78bf003f-5108-4f0a-b231-6073291827c8.png)
 
-Üres teendőlista:   
+Üres teendőlista:
 
 ![image](https://user-images.githubusercontent.com/68642008/185646095-7c29904c-44a4-43d2-8942-36a9725a39bd.png)
 
