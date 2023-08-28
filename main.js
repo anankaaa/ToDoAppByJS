@@ -56,9 +56,17 @@ const showPendingItems = () => {
 
 const showFinishedItems = () => {
   const finishedNumber = document.querySelector(".completed");
-  finishedNumber.innerHTML = `Completed tasks: ${Math.round(
-    (finished.length / (finished.length + unfinished.length)) * 100
-  )} %:`;
+
+  const sumLength = finished.length + unfinished.length;
+
+  if (sumLength) {
+    finishedNumber.innerHTML = `Completed tasks: ${Math.round(
+      (finished.length / sumLength) * 100
+    )} %`;
+  } else {
+    finishedNumber.innerHTML = `Completed tasks: 0 %`;
+  }
+
   let myList = document.querySelector(".CompletedList");
   myList.innerHTML = "";
 
