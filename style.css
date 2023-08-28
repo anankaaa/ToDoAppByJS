@@ -6,11 +6,12 @@
 }
 
 h2 {
-  margin-top: 50px;
-  color: salmon;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: rgb(114, 31, 22);
   text-align: center;
   font-size: 100px;
-  background-color: gainsboro;
+  background: linear-gradient(#eee, #555);
 }
 
 .maincontainer {
@@ -23,24 +24,43 @@ h2 {
 }
 
 .date {
-  color: sienna;
+  color: rgb(88, 35, 10);
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
   margin-top: 50px;
   font-size: 20px;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
-.addnewToDo {
-  margin-bottom: 20px;
-  margin-right: 0;
-  height: 7px;
-  width: 75;
+.addNewToDo {
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  height: 3rem;
+  width: 30%;
+  font-style: italic;
+  color: #888;
+  border-radius: 4px;
+  border-top: .2rem solid rgb(18, 44, 17);
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
 }
 
 .addBtn {
-  background-color: darkslategrey;
+  background-color: rgb(57, 182, 182);
   color: white;
-  padding: 2px;
-  border-radius: 4px;
+  padding: .5rem;
+  border-radius: 8px;
+  height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: .2rem solid rgb(18, 44, 17);
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.addBtn i {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
 }
 
 .myList {
@@ -48,11 +68,12 @@ h2 {
   padding: 0;
 }
 
-.myList li, .CompletedList li{
+.myList li,
+.CompletedList li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #eee;
+  background: #888484;
   font-size: 20px;
   transition: 0.2s;
   user-select: none;
@@ -61,6 +82,12 @@ h2 {
 
 .myList li:nth-child(odd) {
   background: #f9f9f9;
+  color: rgb(53, 11, 240)
+}
+
+.myList li:nth-child(even) {
+  background: #ddd9d9;
+  color: rgb(53, 11, 240)
 }
 
 .myList li:hover::before {
@@ -71,28 +98,43 @@ h2 {
   content: "✅   ";
 }
 
-.CompletedList li{
+.CompletedList li {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-.ShowAndClearBtn {
-  margin: 20px;
+.show,
+.clear {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   color: salmon;
   justify-content: center;
+  border: 0.2rem solid salmon;
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
   border-radius: 4px;
 }
 
-.pending, .completed {
-  color: salmon;
-  margin-top: 50px;
-  font-size: 20px;
-  margin-bottom: 10px;
-  background-color: gainsboro;
-  padding: 20px;
-  width: 30vw;
+.show:hover,
+.clear:hover {
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
+
+.pending,
+.completed {
+  color: salmon;
+  margin: 3rem 0 1rem 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: gainsboro;
+  padding: 1rem;
+  width: 30vw;
+  transform: skew(-10deg);
+}
+
+
 
 .hidden {
   display: none;
